@@ -59,7 +59,7 @@ Step 5. Create a workflow with a task that references the resource.
 
 7. Click **Save**. Click **Back to workflow panel** and click **Release** to publish the workflow.
 
-Step 5. Click **Pre-run** to run the workflow.
+Step 6. Click **Pre-run** to run the workflow.
 
 ## Verify the results   
 
