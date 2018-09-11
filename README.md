@@ -24,7 +24,9 @@ Step 4. Upload the `.zip` file as a resource of EnOS in the following procedure:
 	 Click **OK**.
 
 3. Click **New version** and upload the `external_service.zip` file with settings as shown in the following figure:
-	 ![Upload resource](media/resource.jpg)
+
+  <img src="media/resource.jpg" alt="New version of resource" width="400"/>
+
 
 Step 5. Create a workflow with a task that references the resource.
 1. In the EnOS Console, click **Data IDE > Task Designer** from the left navigation panel and click **New Workflow**.
@@ -33,7 +35,7 @@ Step 5. Create a workflow with a task that references the resource.
 	 - **Name**: external_script_1
 	 - **Type**: Manual Scheduling
 	 - Select Dir: the directory where you want to store the workflow.
-   ![New workflow](media/new_workflow.jpg)
+   <img src="media/new_workflow.jpg" alt="New workflow" width="400"/>
 
 3. From the **Component** panel, drag the **SHELL** type of task node into the workflow panel.
 4. In the **New Task Node** window, provide name and description of the task. Click **Create**.
@@ -43,10 +45,10 @@ Step 5. Create a workflow with a task that references the resource.
 	 ```
 	 sh external_service.sh ${service_url} ${instance_id} ${command}
 	 ```
-	 where,  
 
+   where,  
 	 	- *service_url* and *command* are parameters that you'll define in the **Parameter Config** tab.
-	 	- *_instance_id_* is a system variable that indicates the identifier of the workflow instance.
+	 	- *instance_id* is a system variable that indicates the identifier of the workflow instance.
 	 - Select the resource and resource version that you uploaded in Step 4.
 
 6. Click the **Parameter Config** tab from the right edge of the task configuration panel and provide the following settings:
@@ -70,4 +72,4 @@ After you pre-run the workflow, a workflow instance is generated. You can then t
 2. Click **Manual instance** and locate the instance through the name of the workflow. The workflow instance is shown as in the following figure:
 	 ![Instance list](media/instance.jpg)
 3. Click the name of instance from the table and double-click the task from the panel. You can then view the log by clicking the **Scheduling Log** tab.
-   ![Log](media/log.jpg)
+    <img src="media/log.jpg" alt="Log" width="400"/>
