@@ -8,9 +8,9 @@ In this example, the `external_service.sh` script runs the [`customscript.py`](.
 
 ## How to use the script
 
-Step 1. In your file system, create a directory and save the Python script that you want to run and its relevant resources in the directory.
+Step 1. Fork this repo to your local file system.
 
-Step 2. Download the `external_service.sh` file and save it in the directory that you created in step 1.
+Step 2. From your file system, open the directory that you forked in Step 1 and replace the `customscript.py` file with your own Python script.
 
 Step 3. Compress all files in the directory into a `.zip` file, for example, `external_service.zip`.
 
@@ -37,7 +37,7 @@ Step 5. Create a workflow with a task that references the resource.
 
 3. From the **Component** panel, drag the **SHELL** type of task node into the workflow panel.
 4. In the **New Task Node** window, provide name and description of the task. Click **Create**.
-5. Double click the task node that you just created amd provide the following settings about the task:
+5. Double click the task node that you just created and provide the following settings about the task:
 	 - **Command**: enter the following command:
 	 ```
 	 sh external_service.sh ${service_url} ${instance_id} ${command}
@@ -52,6 +52,8 @@ Step 5. Create a workflow with a task that references the resource.
 	service_url="http://172.20.101.141:8185/uploadservice"    
 	command="python customscript.py"  
 	```
+  **Note**: If your Python script uses a different file name, you'll need to edit the value of `command` with the name of your script file.
+
 	The following figure shows the task configuration in this example.
 	![Task configuration](media/task.jpg)
 
