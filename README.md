@@ -1,10 +1,10 @@
 # Using EnOS Data IDE to run an external Python script
 
-Use the `external_service.sh` script with EnOS Data IDE to run your owner Python script.
+Use the `external_service.sh` script with EnOS Data IDE to run your own Python script.
 
 ## About the script
 
-In this example, the `external_service.sh` script runs the [`customscript.py`](../customscript.py) python script. You can replace the `customscript.py` with your own python script.
+In this example, the `external_service.sh` script runs the [`customscript.py`](customscript.py) script. You can replace the `customscript.py` with your own Python script.
 
 ## How to use the script
 
@@ -28,21 +28,23 @@ Step 4. Upload the `.zip` file as a resource of EnOS in the following procedure:
 
 Step 5. Create a workflow with a task that references the resource.
 1. In the EnOS Console, click **Data IDE > Task Designer** from the left navigation panel and click **New Workflow**.
-2. In the **New Workflow** window, provide the following settings about the workflow:
+2. In the **New Workflow** window, provide the following settings about the workflow and click **OK**
 	 - **Mode**: Create.
 	 - **Name**: external_script_1
 	 - **Type**: Manual Scheduling
 	 - Select Dir: the directory where you want to store the workflow.
-	 Click **OK**.
+   ![New workflow](media/new_workflow.jpg)
 
 3. From the **Component** panel, drag the **SHELL** type of task node into the workflow panel.
 4. In the **New Task Node** window, provide name and description of the task. Click **Create**.
+   ![New task](media/new_task.jpg)
 5. Double click the task node that you just created and provide the following settings about the task:
 	 - **Command**: enter the following command:
 	 ```
 	 sh external_service.sh ${service_url} ${instance_id} ${command}
 	 ```
-	 where,
+	 where,  
+
 	 	- *service_url* and *command* are parameters that you'll define in the **Parameter Config** tab.
 	 	- *_instance_id_* is a system variable that indicates the identifier of the workflow instance.
 	 - Select the resource and resource version that you uploaded in Step 4.
