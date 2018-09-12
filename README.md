@@ -8,7 +8,7 @@ In this example, the `external_service.sh` script runs the [`customscript.py`](c
 
 ## How to use the script
 
-Step 1. Fork this repo to your local file system.
+Step 1. Clone this repo to your local file system.
 
 Step 2. From your file system, open the directory that you forked in Step 1 and replace the `customscript.py` file with your own Python script.
 
@@ -25,7 +25,7 @@ Step 4. Upload the `.zip` file as a resource of EnOS in the following procedure:
 
 3. Click **New version** and upload the `external_service.zip` file with settings as shown in the following figure:
 
-  <img src="media/resource.jpg" alt="New version of resource" width="500"/>
+   <img src="media/resource.jpg" alt="New version of resource" width="500"/>
 
 
 Step 5. Create a workflow with a task that references the resource.
@@ -46,10 +46,7 @@ Step 5. Create a workflow with a task that references the resource.
 	 sh external_service.sh ${service_url} ${instance_id} ${command}
 	 ```
 
-    where,
-
-    - *service_url* and *command* are parameters that you'll define in the **Parameter Config** tab.
-    - *instance_id* is a system variable that indicates the identifier of the workflow instance.
+    where, *service_url* and *command* are parameters that you'll define in the **Parameter Config** tab. *instance_id* is a system variable that indicates the identifier of the workflow instance.
 
 	 - Select the resource and resource version that you uploaded in Step 4.
 
@@ -60,9 +57,9 @@ Step 5. Create a workflow with a task that references the resource.
 	```
   **Note**: If your Python script uses a different file name, you'll need to edit the value of `command` with the name of your script file.
 
-	The following figure shows the task configuration in this example.
+   The following figure shows the task configuration in this example.
 
-	![Task configuration](media/task.jpg)
+   ![Task configuration](media/task.jpg)
 
 7. Click **Save**. Click **Back to workflow panel** and click **Release** to publish the workflow.
 
